@@ -9,11 +9,26 @@ const mainContainer = document.querySelector('.container');
 // Dichiarazione bottone Play
 const playButton = document.getElementById('play');
 
+// Dichiarazione scleta Difficoltà
+const userChoice = document.getElementById('choice');
+
 // Al click del bottone play
 playButton.addEventListener('click', function() {
 
-  // Creazione 100 divs
-  let itemsGenerated = 100;
+  let outputUserChoice = userChoice.value;
+
+  let itemsGenerated = 0;
+
+  if (outputUserChoice === 'easy') {
+    itemsGenerated = 100;
+
+  } else if (outputUserChoice === 'medium') {
+    itemsGenerated = 81;
+
+  } else if (outputUserChoice === 'hard') {
+    itemsGenerated = 49;
+
+  }
 
   for (let i = 1; i <= itemsGenerated; i++) {
 
