@@ -1,3 +1,5 @@
+/* Generici */
+
 * {
   margin: 0;
   padding: 0;
@@ -9,9 +11,15 @@
   font-size: 18px;
 }
 
+body {
+  height: 100vh;
+}
+
+/* Header */
+
 header {
   height: 100px;
-  padding: 0 3rem;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -20,4 +28,20 @@ header {
 button {
   padding: .25rem 2rem;
   font-weight: bold;
+}
+
+/* Main */
+
+main {
+  background-color: aquamarine;
+  height: calc(100vh - 160px);
+}
+
+/* Footer */
+
+footer {
+  height: 60px;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
 }
