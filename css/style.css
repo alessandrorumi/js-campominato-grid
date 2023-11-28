@@ -44,10 +44,13 @@ main {
   width: calc(100% / 10);
   aspect-ratio: 1 / 1;
   border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .clicked {
-  background-color: aqua;
+  background-color: cadetblue;
 }
 
 /* Footer */

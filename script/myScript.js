@@ -13,13 +13,28 @@ const playButton = document.getElementById('play');
 playButton.addEventListener('click', function() {
 
   // Creazione 100 divs
-  for (let i = 1; i <= 100; i++) {
+  let itemsGenerated = 100;
 
+  for (let i = 1; i <= itemsGenerated; i++) {
+
+    // Creazione elemento (tramite funzione)
     const myNewElement = createMyElement('div', 'square');
 
+    // Append contenuto
+    myNewElement.append(i);
+
+    // Append elemento creato in container
     mainContainer.append(myNewElement);
 
+    // Al click del div .square
+    myNewElement.addEventListener('click', function() {
+    
+      myNewElement.classList.add('clicked');
+    
+    });
+    
   }
+
 });
 
 
