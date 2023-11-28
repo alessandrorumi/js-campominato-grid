@@ -17,18 +17,30 @@ playButton.addEventListener('click', function() {
 
   let outputUserChoice = userChoice.value;
 
+  // Dichiaraione elementi ed elemeni per riga
   let itemsGenerated = 0;
+  let itemsPerRow = 0;
 
+  // Difficoltà
+  // Facile
   if (outputUserChoice === 'easy') {
     itemsGenerated = 100;
+    itemsPerRow = 10;
 
+    // Medio
   } else if (outputUserChoice === 'medium') {
     itemsGenerated = 81;
+    itemsPerRow = 9;
 
+    // Difficile
   } else if (outputUserChoice === 'hard') {
     itemsGenerated = 49;
+    itemsPerRow = 7;
 
   }
+
+  // Larghezza di ogni colonna
+  const columnWidth = 100 / itemsPerRow;
 
   for (let i = 1; i <= itemsGenerated; i++) {
 
@@ -37,6 +49,9 @@ playButton.addEventListener('click', function() {
 
     // Append contenuto
     myNewElement.append(i);
+
+    // Larghezza di ogni riga in %
+    myNewElement.style.width = `${columnWidth}%`;
 
     // Append elemento creato in container
     mainContainer.append(myNewElement);
@@ -53,8 +68,6 @@ playButton.addEventListener('click', function() {
   }
 
 });
-
-
 
 // Funzione Creazione Elementi in Html
 function createMyElement(htmlElement, className) {
