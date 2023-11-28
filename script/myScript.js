@@ -30,6 +30,8 @@ playButton.addEventListener('click', function() {
     myNewElement.addEventListener('click', function() {
     
       myNewElement.classList.add('clicked');
+
+      console.log([i]);
     
     });
     
@@ -39,7 +41,7 @@ playButton.addEventListener('click', function() {
 
 
 
-// Funzione Creazione Elementi in HTML
+// Funzione Creazione Elementi in Html
 function createMyElement(htmlElement, className) {
 
   const newElement = document.createElement(htmlElement);
