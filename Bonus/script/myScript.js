@@ -9,16 +9,18 @@ const mainContainer = document.querySelector('.container');
 // Dichiarazione bottone Play
 const playButton = document.getElementById('play');
 
+const stop = document.getElementById('reset');
+
 // Dichiarazione scleta Difficoltà
 const userChoice = document.getElementById('choice');
+
+// Dichiaraione elementi
+  let itemsGenerated = 0;
 
 // Al click del bottone play
 playButton.addEventListener('click', function() {
 
   let outputUserChoice = userChoice.value;
-
-  // Dichiaraione elementi ed elemeni per riga
-  let itemsGenerated = 0;
 
   // Difficoltà
   // Facile
@@ -67,6 +69,13 @@ playButton.addEventListener('click', function() {
   }
 
 });
+
+// Al click del bottone reset
+stop.addEventListener('click', function() {
+
+  mainContainer.innerHTML = '';
+
+})
 
 // Funzione Creazione Elementi in Html
 function createMyElement(htmlElement, className) {
