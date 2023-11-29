@@ -30,14 +30,16 @@ button {
 
 main {
   background-color: aquamarine;
+  height: calc(100vh - 160px);
+  display: flex;
+  align-items: center;
 }
 
 .container {
-  width: 50%;
+  width: 500px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 5rem 0;
 }
 
 .square {

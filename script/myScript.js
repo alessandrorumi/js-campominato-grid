@@ -12,6 +12,9 @@ const playButton = document.getElementById('play');
 // Al click del bottone play
 playButton.addEventListener('click', function() {
 
+   // Creazione griglia vuota
+   mainContainer.innerHTML = '';
+
   // Creazione 100 divs
   let itemsGenerated = 100;
 

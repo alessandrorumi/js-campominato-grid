@@ -20,6 +20,9 @@ const userChoice = document.getElementById('choice');
 // Al click del bottone play
 playButton.addEventListener('click', function() {
 
+  // Creazione griglia vuota
+  mainContainer.innerHTML = '';
+
   let outputUserChoice = userChoice.value;
 
   // Difficoltà
@@ -73,6 +76,7 @@ playButton.addEventListener('click', function() {
 // Al click del bottone reset
 stop.addEventListener('click', function() {
 
+  // Creazione griglia vuota
   mainContainer.innerHTML = '';
 
 })
