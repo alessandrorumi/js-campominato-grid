@@ -52,6 +52,10 @@ main {
   background-color: cadetblue;
 }
 
+select {
+  font-size: 16px;
+}
+
 /* Footer */
 
 footer {

@@ -19,25 +19,24 @@ playButton.addEventListener('click', function() {
 
   // Dichiaraione elementi ed elemeni per riga
   let itemsGenerated = 0;
-  let itemsPerRow = 0;
 
   // Difficoltà
   // Facile
   if (outputUserChoice === 'easy') {
     itemsGenerated = 100;
-    itemsPerRow = 10;
 
     // Medio
   } else if (outputUserChoice === 'medium') {
     itemsGenerated = 81;
-    itemsPerRow = 9;
 
     // Difficile
   } else if (outputUserChoice === 'hard') {
     itemsGenerated = 49;
-    itemsPerRow = 7;
 
   }
+
+  // Dichiarazione elementi per riga (Math.sqrt = radice quadrata degli square generati)
+  const itemsPerRow = Math.sqrt(itemsGenerated);
 
   // Larghezza di ogni colonna
   const columnWidth = 100 / itemsPerRow;
